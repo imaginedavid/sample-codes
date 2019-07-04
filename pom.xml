@@ -1,0 +1,87 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>sample-codes</groupId>
+	<artifactId>sample-codes</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>sample-codes Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+
+
+	<properties>
+		<spring.version>4.1.8.RELEASE</spring.version>
+		<!--
+		<spring.version>4.0.1.RELEASE</spring.version>
+		<spring.version>3.2.4.RELEASE</spring.version>
+		 -->
+  		<jackson.version>2.4.0</jackson.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.9</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openjdk.jmh</groupId>
+			<artifactId>jmh-core</artifactId>
+			<version>1.19</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openjdk.jmh</groupId>
+			<artifactId>jmh-generator-annprocess</artifactId>
+			<version>1.19</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>imagineyhj</groupId>
+			<artifactId>memoryutil-0.1.jar</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>/Users/imaginedavid/Documents/develop/workspace-framework/test-all/lib/classmexer.jar</systemPath>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.10</version>
+		</dependency>
+		<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcprov-ext-jdk15on</artifactId>
+			<version>1.55</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+
+	</dependencies>
+	
+	<build>
+		<finalName>sample-codes</finalName>
+		<plugins>
+			<plugin>
+			    <groupId>org.apache.felix</groupId>
+			    <artifactId>maven-bundle-plugin</artifactId>
+			    <extensions>true</extensions>
+			</plugin>
+			<plugin>  
+				<groupId>org.apache.maven.plugins</groupId>  
+				<artifactId>maven-compiler-plugin</artifactId>  
+				<configuration>  
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>  
+			</plugin>
+		</plugins>
+	</build>
+</project>
